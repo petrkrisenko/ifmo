@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Домашнее задание 3</title>
+  </head>
+	<script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('#ex1').click(function(){
+			$('#result').load("/krysenko?var=2");
+		});
+		$('#ex2').click(function(){
+			var m = $('#num1').val();
+			var n = $('#num2').val();
+			$('#result1').load("/krysenko?var=3&m="+m+"&n="+n);
+		});
+		$('#ex3').click(function(){
+			var a = $('#2num1').val();
+			var b = $('#2num2').val();
+			var c = $('#2num3').val();
+			$('#result2').load("/krysenko?var=4&a="+a+"&b="+b+"&c="+c);
+		});
+		$('#ex4').click(function(){
+			$('#result3').load("/krysenko?var=5");
+		});
+		$('#ex5').click(function(){
+			$('#result4').load("/krysenko?var=6");
+		});
+	});
+	</script>
+  <body>
+  
+  	<div>
+  		<p>
+  			Выполните тоже самое для вывода не на консоль, а на веб-странице.
+Используйте следующий код для веб-страницы, где your_servlet_name это
+имя вашего сервлета, выполняющего код
+  		</p>
+  		<button id="ex1">Выполнить задание</button><br>
+  		<b><p id="result"></p></b>
+  	</div>
+    <div>
+    	<p>Создайте форму на веб-странице, в которую вводятся два числа m и n. Выведите
+ближайшее к 10. Например, среди чисел 8,5 и 11,45 ближайшее к десяти 11,45</p>
+		<form>
+			<input type="text" id="num1">
+			<input type="text" id="num2">	
+		</form>
+		<button id="ex2">Выполнить задание</button>
+		<p id="result1"></p>
+    </div>
+    <div>
+    	<p>
+    		Создайте форму для ввода трех целых чисел a,b,c для формулы ax²+bx+c=0.
+Выведите корни уравнения, либо сообщите, что корней нет.
+    	</p>
+    	<form>
+    		<input type="text" id="2num1">
+			<input type="text" id="2num2">
+			<input type="text" id="2num3">
+    	</form>
+    	<button id="ex3">Выполнить задание</button>
+    	<p id="result2"></p>
+    </div>
+    <div>
+    	<p>Создать двумерный массив из 8 строк по 5 столбцов в каждой из случайных
+целых чисел из отрезка [10;99]. Вывести массив на веб-страницу.</p>
+<button id="ex4">Выполнить задание</button>
+<p id="result3"></p>
+    </div>
+    <div>
+    	<p>
+    	Создать двумерный массив из 5 строк по 8 столбцов в каждой из случайных
+целых чисел из отрезка [-99;99]. Вывести массив на веб-страницу. После этого
+на отдельной строке вывести на экран значение максимального элемента этого
+массива (его индекс не имеет значения).
+    	</p>
+    	<button id="ex5">Выполнить задание</button>
+    	<p id="result4"></p>
+    </div>
+    <br>
+	<p><a href = "index.html">Назад</a></p>
+    
+  </body>
+</html>
